@@ -24,7 +24,7 @@ class LinkedList:
   
     def delete_node(self, data): 
         current = self.head
-        if current and current.data == data: 
+        while current and current.data == data: 
             self.head = current.next 
             current = None 
             return 
