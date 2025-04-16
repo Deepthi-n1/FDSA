@@ -15,17 +15,17 @@ class DoublyLinkedList:
             new_node.next = self.head
         self.head = new_node
     
-    def delete_node(self, key):
+    def delete_node(self, data):
         temp = self.head
         
-        if temp is not None and temp.data == key:
+        if temp is not None and temp.data == data:
             self.head = temp.next
             if self.head is not None:
                 self.head.prev = None
             temp = None
             return
         
-        while temp is not None and temp.data != key:
+        while temp is not None and temp.data != data:
             temp = temp.next
 
         if temp is None:
